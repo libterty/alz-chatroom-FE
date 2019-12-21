@@ -1,6 +1,8 @@
 .DS_Store
 node_modules
-/dist
+
+# Disable for Production purpose
+# /dist
 
 # local env files
 .env.local
