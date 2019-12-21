@@ -21,7 +21,7 @@ const routes = [
   {
     path: '/admin',
     exact: true,
-    redirect: '/admin/restaurants'
+    redirect: '/admin/users'
   },
   {
     path: '/admin/users',
