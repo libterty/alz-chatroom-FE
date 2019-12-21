@@ -8,6 +8,21 @@ Vue.use(VueRouter)
 
 const routes = [
   {
+    path: '/',
+    name: 'root',
+    redirect: '/chatroom' 
+  },
+  {
+    path: '/admin',
+    exact: true,
+    redirect: '/admin/restaurants'
+  },
+  {
+    path: '/admin/users',
+    name: 'admin-users',
+    component: () => import('../views/AdminUsers.vue')
+  },
+  {
     path: '/signup',
     name: 'SignUp',
     component: SignUp

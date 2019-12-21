@@ -70,8 +70,7 @@ export default {
                 if (res.status === 'success') {
                     this.$store.commit('setCurrentUser', res.user);
                     this.$router
-                        .go({ name: 'Restaurants' })
-                        .catch(e => console.log(e));
+                        .go({ name: 'ChatRoom' })
                 } else {
                     throw new Error(res.message);
                 }

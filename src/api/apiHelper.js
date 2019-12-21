@@ -16,7 +16,7 @@ export const getAuthRequest = url => {
     { headers: 
       { 
         'Content-Type': 'application/json', 
-        Authorization: 'Bearer '+auth.token
+        Authorization: 'Bearer '+ auth.token
       }
     }
   ).then(res => {
@@ -41,7 +41,7 @@ export const postAuthRequest = (url, data) => {
     method: 'POST',
     url: url,
     data: data,
-    headers: { 'Content-Type': 'application/json', Authorization: 'Bearer '+auth.token}
+    headers: { 'Content-Type': 'application/json', Authorization: 'Bearer '+ auth.token}
   })
     .then(res => { return res })
     .catch(err => console.log('fetch POST Auth err', err.message));
@@ -52,8 +52,19 @@ export const putAuthRequest = (url, data) => {
     method: 'PUT',
     url: url,
     data: data,
-    headers: { 'Content-Type': 'application/json', Authorization: 'Bearer '+auth.token}
+    headers: { 'Content-Type': 'application/json', Authorization: 'Bearer '+ auth.token}
   })
     .then(res => { return res })
     .catch(err => console.log('fetch PUT Auth err', err.message));
+}
+
+export const deleteRequest = url => {
+  return axios.delete(url, 
+    {  headers:
+      { Authorization: 'Bearer '+ auth.token}
+    }
+  ).then(res => {
+    return res
+  })
+  .catch(err => console.log('fetch DELETE err', err.message));
 }
