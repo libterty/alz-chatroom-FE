@@ -1,6 +1,7 @@
 <template>
     <b-container class="py-5">
         <h1>管理員頁面</h1>
+        <a href="/chatroom">前往聊天室</a>
         <div v-if="isShow">
             <AdminUsersTable
                 :initUsers="initUsers"

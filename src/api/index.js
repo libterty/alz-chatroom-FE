@@ -18,9 +18,8 @@ class Request {
     return new Promise(async (resolve, reject) => {
       try {
         const res = await postRequest(config.ROOT_URL+'/signin', data);
-        res.data.status === 'success' ? localStorage.setItem('credit', JSON.stringify(res.data)) : null;
         resolve(
-          res.data
+          res
         );
       } catch (error) {
         reject(error);

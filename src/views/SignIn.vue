@@ -67,12 +67,10 @@ export default {
             if (this.form.email !== '' || this.form.password !== '') {
                 const data = JSON.stringify(this.form);
                 const res = await request.postSignIn(data);
-                if (res.status === 'success') {
-                    this.$store.commit('setCurrentUser', res.user);
+                if (res.data.status === 'success') {
+                    res.data.status === 'success' ? localStorage.setItem('credit', JSON.stringify(res.data)) : null;
                     this.$router
                         .go({ name: 'ChatRoom' })
-                } else {
-                    throw new Error(res.message);
                 }
             } else {
                 alert('Please fill in all the Form');

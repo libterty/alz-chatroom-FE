@@ -103,8 +103,9 @@ export default {
             } else {
                 const data = JSON.stringify(this.form);
                 const res = await request.postSignUp(data);
-                if (res.status === 'success') {
-                    this.$router.go({ name: 'SignIn' })
+                console.log('this.res', res);
+                if (res.status !== 'success') {
+                    alert(res.message);
                 }
             }
         },
