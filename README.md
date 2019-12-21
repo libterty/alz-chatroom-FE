@@ -8,13 +8,13 @@
 - 後端使用Node.js搭配ＭySQL實現簡易聊天室伺服器
 
 聊天室頁面(使用者-管理員)
-![image](https://github.com/libterty/alz-chatroom-FE/blob/master/client/src/assets/管理員看聊天室.png)
+![image](https://github.com/libterty/alz-chatroom-FE/blob/master/src/assets/管理員看聊天室.png)
 
 聊天室頁面(使用者-一般使用者)
-![image](https://github.com/libterty/alz-chatroom-FE/blob/master/client/src/assets/使用者看聊天室.png)
+![image](https://github.com/libterty/alz-chatroom-FE/blob/master/src/assets/使用者看聊天室.png)
 
 後台頁面(使用者-管理員)
-![image](https://github.com/libterty/alz-chatroom-FE/blob/master/client/src/assets/後台.png)
+![image](https://github.com/libterty/alz-chatroom-FE/blob/master/src/assets/後台.png)
 
 # 測試用會員
 ```
