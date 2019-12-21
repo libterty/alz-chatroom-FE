@@ -13,6 +13,11 @@ const routes = [
     redirect: '/chatroom' 
   },
   {
+    path: '/chatroom',
+    name: 'chatroom',
+    component: () => import('../views/Chatroom.vue')
+  },
+  {
     path: '/admin',
     exact: true,
     redirect: '/admin/restaurants'

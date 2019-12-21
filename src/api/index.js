@@ -1,4 +1,4 @@
-import { postRequest, getAuthRequest, putAuthRequest, deleteRequest } from './apiHelper';
+import { postRequest, postAuthRequest, getAuthRequest, putAuthRequest, deleteRequest } from './apiHelper';
 import config from '../config';
 
 class Request {
@@ -58,6 +58,33 @@ class Request {
     return new Promise(async (resolve, reject) => {
       try {
         const res = await deleteRequest(config.ROOT_URL + `/admin/users/${cId}`);
+        resolve (
+          res.data
+        );
+      } catch (error) {
+        reject(error);
+      }
+    })
+  }
+
+  getMessages() {
+    return new Promise(async (resolve, reject) => {
+      try {
+        const res = await getAuthRequest(config.ROOT_URL + '/chatroom');
+        console.log('res', res);
+        resolve (
+          res
+        );
+      } catch (error) {
+        reject(error);
+      }
+    })
+  }
+
+  postMessage(data) {
+    return new Promise(async (resolve, reject) => {
+      try {
+        const res = await postAuthRequest(config.ROOT_URL + '/chatroom/create', data);
         resolve (
           res.data
         );
